@@ -1015,7 +1015,7 @@ class EmployeeModelTest(TestCase) :
         Candy.objects.create(name='Ferrero Rocher', sort='Конфеты', price='400')
 
     def test_text_max_length(self):
-        candyname = Client.objects.get(id=1)
+        candyname = Candy.objects.get(id=1)
         max_length = candyname._meta.get_field('name').max_length
         seLf.assertequats(max_tength, 100)
 </code></pre>
@@ -1026,9 +1026,9 @@ class EmployeeModelTest(TestCase) :
         Candy.objects.create(name='Ferrero Rocher', sort='Конфеты', price='400')
 
     def test_object_name_and_sort(self):
-        candy = Candy.objects.get(id=1)
-        expected_object_name = str(candy.name) +&quot; &quot; + str(candy.sort)
-        seLf-assertEquals(expected_object_name, str(candy))
+    candy = Candy.objects.get(id=1)
+    expected_object_name = str(candy.name) +&quot; &quot; + str(candy.sort)
+    seLf-assertEquals(expected_object_name, str(candy))
 </code></pre>
 
 
